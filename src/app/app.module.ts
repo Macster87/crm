@@ -7,6 +7,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { StartModule } from './start/start.module';
 import { StartPageComponent } from './start/start-page/start-page.component';
+import { LegalModule } from './legal/legal.module';
+import { AuthModule } from './features/auth/auth.module';
+import { CustomerModule } from './features/customer/customer.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,14 @@ import { StartPageComponent } from './start/start-page/start-page.component';
     NotFoundPageComponent,
     StartPageComponent,
   ],
-  imports: [BrowserModule, StartModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AuthModule,
+    CustomerModule,
+    StartModule,
+    LegalModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

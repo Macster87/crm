@@ -1,0 +1,19 @@
+<h2>List of current customers</h2>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Volume</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (customer of customers; track customer.id) {
+            <tr>
+              <th scope="row">{{customer.id}}</th>
+              <td>{{customer.name}}</td>
+              <td>{{customer.volume}}</td>
+            </tr>
+        }
+    </tbody>
+  </table>

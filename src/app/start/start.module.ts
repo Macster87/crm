@@ -10,8 +10,10 @@ import { StartPageComponent } from './start-page/start-page.component';
     RouterModule.forChild([
       {
         path: '',
-        component: StartPageComponent,
+        redirectTo: '/start',
+        pathMatch: 'full',
       },
+      { path: 'start', component: StartPageComponent },
     ]),
   ],
 })
